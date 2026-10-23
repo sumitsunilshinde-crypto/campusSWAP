@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CampusSwap — Campus Marketplace</title>
+
+
+    <!-- Google Font -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body class="auth-page">
+
+
+    <!-- ==========================================
+         BACKGROUND DECORATION
+         ========================================== -->
+
+    <div class="auth-orb auth-orb-one"></div>
+
+    <div class="auth-orb auth-orb-two"></div>
+
+    <div class="auth-grid"></div>
+
+
+
+    <!-- ==========================================
+         AUTH LAYOUT
+         ========================================== -->
+
+    <main class="auth-container">
+
+
+        <!-- ======================================
+             LEFT BRAND PANEL
+             ====================================== -->
+
+        <section class="auth-brand-panel">
+
+
+            <div class="auth-brand">
+
+                <div class="brand-icon">
+
+                    <i class="fa-solid fa-arrows-rotate"></i>
+
+                </div>
+
+
+                <span>
+                    CampusSwap
+                </span>
+
+            </div>
+
+
+            <div class="auth-brand-content">
+
+                <span class="eyebrow">
+
+                    <i class="fa-solid fa-sparkles"></i>
+
+                    Your campus. Your community.
+
+                </span>
+
+
+                <h1>
+
+                    Share more.
+                    <br>
+
+                    <span>
+                        Spend less.
+                    </span>
+
+                </h1>
+
+
+                <p>
+
+                    Borrow textbooks, exchange equipment,
+                    donate stationery and discover useful
+                    things from students around you.
+
+                </p>
+
+
+                <div class="auth-feature-list">
+
+                    <div class="auth-feature">
+
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Campus-first
+                            </strong>
+
+                            <span>
+                                Connect with fellow students.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="auth-feature">
+
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Share & exchange
+                            </strong>
+
+                            <span>
+                                Give useful things a second life.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="auth-feature">
+
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Simple & fast
+                            </strong>
+
+                            <span>
+                                Find what you need in seconds.
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="auth-footer-note">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Built for students, by students.
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             LOGIN CARD
+             ====================================== -->
+
+        <section class="auth-form-area">
+
+
+            <div class="auth-card">
+
+
+                <div class="mobile-brand">
+
+                    <div class="brand-icon">
+
+                        <i class="fa-solid fa-arrows-rotate"></i>
+
+                    </div>
+
+                    <span>
+                        CampusSwap
+                    </span>
+
+                </div>
+
+
+                <div class="auth-heading">
+
+                    <span class="auth-kicker">
+                        Welcome back
+                    </span>
+
+
+                    <h2>
+                        Sign in to your account
+                    </h2>
+
+
+                    <p>
+                        Continue your campus exchange journey.
+                    </p>
+
+                </div>
+
+
+
+                <!-- LOGIN FORM -->
+
+                <form
+                    id="login-form"
+                    novalidate
+                >
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Campus Email
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i
+                                class="fa-regular fa-envelope input-icon"
+                            ></i>
+
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="student@campus.edu"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <div class="label-row">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+
+                            <a
+                                href="#"
+                                id="forgot-password"
+                            >
+                                Forgot password?
+                            </a>
+
+                        </div>
+
+
+                        <div class="input-wrapper">
+
+                            <i
+                                class="fa-solid fa-lock input-icon"
+                            ></i>
+
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+
+                            <button
+                                type="button"
+                                id="toggle-password"
+                                class="password-toggle fa-regular fa-eye"
+                                aria-label="Show password"
+                            ></button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- REMEMBER -->
+
+                    <label class="remember-row">
+
+                        <input
+                            type="checkbox"
+                            id="remember-me"
+                        >
+
+                        <span>
+                            Keep me signed in
+                        </span>
+
+                    </label>
+
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="auth-submit-btn"
+                    >
+
+                        <span>
+                            Sign in
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- SIGNUP -->
+
+                <div class="auth-divider">
+
+                    <span>
+                        New to CampusSwap?
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="signup.html"
+                    class="create-account-btn"
+                >
+
+                    Create a student account
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+
+                <div class="auth-security-note">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <span>
+                        Your campus identity stays private.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         TOAST
+         ========================================== -->
+
+    <div
+        id="toast"
+        class="toast-box"
+        role="status"
+        aria-live="polite"
+    >
+
+        <i
+            id="toast-icon"
+            class="fa-solid fa-circle-check"
+        ></i>
+
+
+        <span id="toast-msg">
+            Welcome!
+        </span>
+
+    </div>
+
+
+
+    <!-- MAIN JS -->
+
+    <script src="api.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

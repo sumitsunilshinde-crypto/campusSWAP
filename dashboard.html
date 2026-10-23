@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CampusSwap - Dashboard</title>
+
+
+    <!-- Google Font -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- Dashboard CSS -->
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVBAR
+         ========================================== -->
+
+    <nav class="navbar">
+
+
+        <div class="brand">
+
+            <i class="fa-solid fa-arrows-rotate"></i>
+
+            <span>
+                CampusSwap
+            </span>
+
+        </div>
+
+
+        <div class="navbar-right">
+
+
+            <button
+                class="notification-btn"
+                id="notification-btn"
+                title="Notifications"
+            >
+
+                <i class="fa-regular fa-bell"></i>
+
+            </button>
+
+
+            <div
+                class="profile-area"
+                id="profile-area"
+            >
+
+                <div
+                    class="profile-avatar"
+                    id="profile-avatar"
+                >
+                    U
+                </div>
+
+
+                <span id="profile-name">
+                    Student
+                </span>
+
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ==========================================
+         MAIN DASHBOARD
+         ========================================== -->
+
+    <main class="dashboard-container">
+
+
+        <!-- ======================================
+             WELCOME
+             ====================================== -->
+
+        <section class="welcome-section">
+
+
+            <div class="welcome-text">
+
+                <h1>
+
+                    Welcome back,
+
+                    <span id="welcome-name">
+                        Student
+                    </span>!
+
+                </h1>
+
+
+                <p>
+
+                    Find, borrow, donate, and exchange
+                    items with your fellow students.
+
+                </p>
+
+            </div>
+
+
+            <button
+                class="list-item-btn"
+                id="list-item-btn"
+            >
+
+                <i class="fa-solid fa-plus"></i>
+
+                List an Item
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ======================================
+             SEARCH
+             ====================================== -->
+
+        <section class="search-section">
+
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search items, categories, or students..."
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             CATEGORIES
+             ====================================== -->
+
+        <section class="categories-section">
+
+
+            <div class="section-header">
+
+
+                <h2>
+                    Browse Categories
+                </h2>
+
+
+                <button
+                    id="view-all"
+                    class="view-all-btn"
+                >
+                    View All
+                </button>
+
+            </div>
+
+
+
+            <div class="categories">
+
+
+                <button
+                    class="category-btn"
+                    data-category="Books"
+                >
+
+                    <i class="fa-solid fa-book"></i>
+
+                    <span>
+                        Books
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    class="category-btn"
+                    data-category="Calculators"
+                >
+
+                    <i class="fa-solid fa-calculator"></i>
+
+                    <span>
+                        Calculators
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    class="category-btn"
+                    data-category="Lab Equipment"
+                >
+
+                    <i class="fa-solid fa-flask"></i>
+
+                    <span>
+                        Lab Equipment
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    class="category-btn"
+                    data-category="Stationery"
+                >
+
+                    <i class="fa-solid fa-pen"></i>
+
+                    <span>
+                        Stationery
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    class="category-btn"
+                    data-category="Electronics"
+                >
+
+                    <i class="fa-solid fa-laptop"></i>
+
+                    <span>
+                        Electronics
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    class="category-btn"
+                    data-category="Other"
+                >
+
+                    <i class="fa-solid fa-box"></i>
+
+                    <span>
+                        Other
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             AVAILABLE ITEMS
+             ====================================== -->
+
+        <section class="items-section">
+
+
+            <div class="section-header">
+
+                <h2>
+                    Available Items
+                </h2>
+
+            </div>
+
+
+            <div
+                class="items-grid"
+                id="items-grid"
+            >
+
+                <!-- Dynamic items -->
+
+            </div>
+
+
+            <div
+                class="no-results"
+                id="no-results"
+                style="display: none;"
+            >
+
+                <i class="fa-solid fa-box-open"></i>
+
+
+                <h3>
+                    No items found
+                </h3>
+
+
+                <p>
+
+                    Try another search or category,
+                    or be the first student to list an item.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             INCOMING REQUESTS
+             ====================================== -->
+
+        <section
+            class="requests-section"
+            id="requests-section"
+        >
+
+
+            <div class="section-header">
+
+                <h2>
+                    Incoming Requests
+                </h2>
+
+            </div>
+
+
+            <div
+                class="requests-grid"
+                id="requests-grid"
+            >
+
+                <!-- Dynamic incoming requests -->
+
+            </div>
+
+
+            <div
+                class="no-requests"
+                id="no-requests"
+            >
+
+                <i class="fa-regular fa-envelope-open"></i>
+
+
+                <h3>
+                    No incoming requests
+                </h3>
+
+
+                <p>
+
+                    Requests from students for your
+                    items will appear here.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             MY REQUESTS
+             ====================================== -->
+
+        <section
+            class="requests-section my-requests-section"
+            id="my-requests-section"
+        >
+
+
+            <div class="section-header">
+
+                <h2>
+                    My Requests
+                </h2>
+
+            </div>
+
+
+            <div
+                class="requests-grid"
+                id="my-requests-grid"
+            >
+
+                <!-- Dynamic personal requests -->
+
+            </div>
+
+
+            <div
+                class="no-requests"
+                id="no-my-requests"
+            >
+
+                <i class="fa-regular fa-paper-plane"></i>
+
+
+                <h3>
+                    No requests yet
+                </h3>
+
+
+                <p>
+
+                    Items you request from other students
+                    will appear here.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==========================================
+         DASHBOARD JAVASCRIPT
+         ========================================== -->
+
+    <script src="api.js"></script>
+    <script src="dashboard.js"></script>
+
+
+</body>
+
+</html>

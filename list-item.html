@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusSwap — List an Item</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="list-item.css">
+</head>
+
+<body class="list-page">
+
+    <div class="list-background-orb orb-one"></div>
+    <div class="list-background-orb orb-two"></div>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="list-navbar">
+
+        <a href="dashboard.html" class="list-brand">
+            <div class="list-brand-icon">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </div>
+
+            <span>CampusSwap</span>
+        </a>
+
+        <div class="list-nav-right">
+
+            <span class="nav-helper">
+                <i class="fa-solid fa-circle-info"></i>
+                Your listing will be visible to campus students
+            </span>
+
+            <a href="dashboard.html" class="back-dashboard">
+                <i class="fa-solid fa-arrow-left"></i>
+                Dashboard
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="list-container">
+
+        <div class="list-header">
+
+            <div>
+                <span class="list-kicker">
+                    <i class="fa-solid fa-plus"></i>
+                    New Listing
+                </span>
+
+                <h1>List an Item</h1>
+
+                <p>
+                    Share something useful with your campus community.
+                </p>
+            </div>
+
+            <div class="listing-progress">
+                <span class="progress-number">01</span>
+                <span class="progress-line"></span>
+                <span class="progress-text">Item Details</span>
+            </div>
+
+        </div>
+
+
+        <!-- ================= FORM ================= -->
+
+        <form id="list-item-form" class="listing-form">
+
+            <!-- BASIC INFORMATION -->
+
+            <section class="listing-card">
+
+                <div class="card-heading">
+
+                    <div class="heading-icon">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+
+                    <div>
+                        <h2>Item Information</h2>
+                        <p>Tell students what you're listing.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <!-- ITEM NAME -->
+
+                    <div class="field full">
+
+                        <label for="item-name">
+                            Item Name
+                            <span>*</span>
+                        </label>
+
+                        <div class="field-wrapper">
+
+                            <i class="fa-solid fa-tag"></i>
+
+                            <input
+                                type="text"
+                                id="item-name"
+                                placeholder="e.g. Engineering Mathematics Textbook"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CATEGORY -->
+
+                    <div class="field">
+
+                        <label for="item-category">
+                            Category
+                            <span>*</span>
+                        </label>
+
+                        <div class="field-wrapper">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                            <select id="item-category" required>
+
+                                <option value="" disabled selected>
+                                    Select category
+                                </option>
+
+                                <option value="Books">
+                                    Books
+                                </option>
+
+                                <option value="Calculators">
+                                    Calculators
+                                </option>
+
+                                <option value="Lab Equipment">
+                                    Lab Equipment
+                                </option>
+
+                                <option value="Stationery">
+                                    Stationery
+                                </option>
+
+                                <option value="Electronics">
+                                    Electronics
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                            <i class="fa-solid fa-chevron-down select-arrow"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONDITION -->
+
+                    <div class="field">
+
+                        <label for="item-condition">
+                            Condition
+                            <span>*</span>
+                        </label>
+
+                        <div class="field-wrapper">
+
+                            <i class="fa-solid fa-star"></i>
+
+                            <select id="item-condition" required>
+
+                                <option value="" disabled selected>
+                                    Select condition
+                                </option>
+
+                                <option value="New">
+                                    New
+                                </option>
+
+                                <option value="Like New">
+                                    Like New
+                                </option>
+
+                                <option value="Good">
+                                    Good
+                                </option>
+
+                                <option value="Fair">
+                                    Fair
+                                </option>
+
+                                <option value="Used">
+                                    Used
+                                </option>
+
+                            </select>
+
+                            <i class="fa-solid fa-chevron-down select-arrow"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DESCRIPTION -->
+
+                    <div class="field full">
+
+                        <label for="item-description">
+                            Description
+                            <span>*</span>
+                        </label>
+
+                        <div class="textarea-wrapper">
+
+                            <textarea
+                                id="item-description"
+                                rows="4"
+                                maxlength="500"
+                                placeholder="Describe the item, its condition, useful details, accessories included, etc."
+                                required
+                            ></textarea>
+
+                            <span id="description-count">
+                                0 / 500
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= LISTING TYPE ================= -->
+
+            <section class="listing-card">
+
+                <div class="card-heading">
+
+                    <div class="heading-icon purple">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+
+                    <div>
+                        <h2>How do you want to share it?</h2>
+                        <p>Choose what students can do with your item.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="listing-options">
+
+                    <!-- BUY -->
+
+                    <label class="listing-option">
+
+                        <input
+                            type="radio"
+                            name="listing-type"
+                            value="Sell"
+                        >
+
+                        <div class="option-content">
+
+                            <div class="option-icon sell">
+                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                            </div>
+
+                            <div>
+                                <strong>Sell</strong>
+                                <span>Sell this item to another student.</span>
+                            </div>
+
+                            <i class="fa-solid fa-circle-check option-check"></i>
+
+                        </div>
+
+                    </label>
+
+
+                    <!-- BORROW -->
+
+                    <label class="listing-option">
+
+                        <input
+                            type="radio"
+                            name="listing-type"
+                            value="Borrow"
+                        >
+
+                        <div class="option-content">
+
+                            <div class="option-icon borrow">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+
+                            <div>
+                                <strong>Borrow</strong>
+                                <span>Let students borrow it for a period.</span>
+                            </div>
+
+                            <i class="fa-solid fa-circle-check option-check"></i>
+
+                        </div>
+
+                    </label>
+
+
+                    <!-- DONATE -->
+
+                    <label class="listing-option">
+
+                        <input
+                            type="radio"
+                            name="listing-type"
+                            value="Donate"
+                        >
+
+                        <div class="option-content">
+
+                            <div class="option-icon donate">
+                                <i class="fa-solid fa-gift"></i>
+                            </div>
+
+                            <div>
+                                <strong>Donate</strong>
+                                <span>Give this item to another student.</span>
+                            </div>
+
+                            <i class="fa-solid fa-circle-check option-check"></i>
+
+                        </div>
+
+                    </label>
+
+
+                    <!-- EXCHANGE -->
+
+                    <label class="listing-option">
+
+                        <input
+                            type="radio"
+                            name="listing-type"
+                            value="Exchange"
+                            checked
+                        >
+
+                        <div class="option-content">
+
+                            <div class="option-icon exchange">
+                                <i class="fa-solid fa-repeat"></i>
+                            </div>
+
+                            <div>
+                                <strong>Exchange</strong>
+                                <span>Exchange it for another useful item.</span>
+                            </div>
+
+                            <i class="fa-solid fa-circle-check option-check"></i>
+
+                        </div>
+
+                    </label>
+
+                </div>
+
+
+                <!-- SELL PRICE -->
+
+                <div
+                    class="conditional-field"
+                    id="price-section"
+                    style="display:none;"
+                >
+
+                    <label for="item-price">
+                        Selling Price
+                    </label>
+
+                    <div class="price-input">
+
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="item-price"
+                            min="0"
+                            placeholder="Enter amount"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- BORROW DURATION -->
+
+                <div
+                    class="conditional-field"
+                    id="borrow-section"
+                    style="display:none;"
+                >
+
+                    <label for="borrow-duration">
+                        Maximum Borrowing Duration
+                    </label>
+
+                    <div class="field-wrapper">
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                        <select id="borrow-duration">
+
+                            <option value="3">
+                                3 Days
+                            </option>
+
+                            <option value="7" selected>
+                                7 Days
+                            </option>
+
+                            <option value="14">
+                                14 Days
+                            </option>
+
+                            <option value="30">
+                                30 Days
+                            </option>
+
+                        </select>
+
+                        <i class="fa-solid fa-chevron-down select-arrow"></i>
+
+                    </div>
+
+                    <small>
+                        This will help track expected return dates later.
+                    </small>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= LOCATION ================= -->
+
+            <section class="listing-card">
+
+                <div class="card-heading">
+
+                    <div class="heading-icon green">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div>
+                        <h2>Pickup Information</h2>
+                        <p>Help students know where the item can be collected.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="field full">
+
+                        <label for="item-location">
+                            Pickup Location
+                            <span>*</span>
+                        </label>
+
+                        <div class="field-wrapper">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <input
+                                type="text"
+                                id="item-location"
+                                placeholder="e.g. TCET Library, Kandivali"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="privacy-note">
+
+                    <div class="privacy-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <div>
+                        <strong>Privacy protected</strong>
+
+                        <p>
+                            Your personal contact details won't be displayed
+                            publicly. Contact sharing can be handled through
+                            the platform.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= SUBMIT ================= -->
+
+            <div class="form-actions">
+
+                <a
+                    href="dashboard.html"
+                    class="cancel-button"
+                >
+                    Cancel
+                </a>
+
+                <button
+                    type="submit"
+                    class="publish-button"
+                >
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Publish Listing</span>
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+
+    <!-- TOAST -->
+
+    <div
+        id="list-toast"
+        class="list-toast"
+        role="status"
+        aria-live="polite"
+    >
+        <i id="list-toast-icon"></i>
+        <span id="list-toast-message"></span>
+    </div>
+
+
+    <script src="api.js"></script>
+    <script src="list-item.js"></script>
+
+</body>
+</html>
